@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 
+:root {
+  --ravenclaw: #012d5c;
+  --gryffindor: #630002;
+  --hufflepuff: #c39300;
+  --slytherin: #013101;
+}
 *,
 *::before,
 *::after {
@@ -26,6 +32,71 @@ header,
 main,
 footer {
   padding: 1rem 3rem;
+}
+main.shopping {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+section.products {
+  flex-basis: 60%;
+  padding: 1rem;
+  border: 1px solid #999;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding-top: 3rem;
+}
+section.products::before {
+  content: 'Products';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+  padding: 0.5rem 0 0 1rem;
+}
+section.cart::before {
+  content: 'Cart';
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  display: block;
+  padding: 0.5rem 1rem 0 0;
+}
+section.cart {
+  flex-basis: 30%;
+  padding: 1rem;
+  border: 1px solid #999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.products .card {
+  width: 200px;
+  border: 1px solid #999;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.cart .card {
+  width: 100px;
+}
+.products .card:hover {
+  background-color: lightgoldenrodyellow;
+  cursor: pointer;
+}
+section p {
+  border-right: none;
 }
 img {
   width: 100%;
@@ -63,4 +134,81 @@ li img {
 }
 li:nth-child(odd) {
   background-color: #ddd;
+}
+form {
+  padding: 1rem 0;
+  border-bottom: 1px solid #999;
+}
+form label {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+form input {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 1rem;
+  width: 30ch;
+}
+form button {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  margin-right: 0.5rem;
+}
+#btnGryffindor {
+  color: white;
+  background-color: var(--gryffindor);
+}
+#btnRavenclaw {
+  color: white;
+  background-color: var(--ravenclaw);
+}
+#btnHufflepuff {
+  color: white;
+  background-color: var(--hufflepuff);
+}
+#btnSlytherin {
+  color: white;
+  background-color: var(--slytherin);
+}
+.lists {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+}
+.students {
+  border: 1px solid #999;
+  padding: 1rem;
+}
+.students h3 {
+  color: currentColor;
+  text-align: center;
+}
+.students p {
+  font-size: 0.8rem;
+  color: currentColor;
+  padding: 0.5rem;
+  border: 1px solid currentColor;
+  margin: 0.5rem;
+}
+#listGryffindor {
+  border-color: var(--gryffindor);
+  color: var(--gryffindor);
+}
+#listRavenclaw {
+  border-color: var(--ravenclaw);
+  color: var(--ravenclaw);
+}
+#listHufflepuff {
+  border-color: var(--hufflepuff);
+  color: var(--hufflepuff);
+}
+#listHufflepuff {
+  border-color: var(--hufflepuff);
+  color: var(--hufflepuff);
 }
