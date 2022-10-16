@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Data 2 HTML</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="seven.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>DOM Exercise Seven - Lucky Numbers</h1>
+    </header>
+    <main>
+      <h3>Lucky Lottery Numbers</h3>
+      <form action="#">
+        <label for="many">How many numbers?</label>
+        <input type="number" id="many" name="many" value="1" min="1" max="10" />
+        <br />
+        <label for="max">Between 1 and </label>
+        <input type="number" id="max" name="max" min="1" max="99" value="49" />
+        <br />
+        <button id="btnGo">Get Lucky</button>
+      </form>
+      <section class="numbers">
+        <!-- generate the numbers and display them here -->
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

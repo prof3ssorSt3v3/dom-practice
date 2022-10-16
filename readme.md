@@ -34,3 +34,19 @@ JavaScript and the DOM.
    be added to the section with the matching class name. Eg: If the user clicks
    on the `Gryffindor` button then the paragraph should be added to the
    `gryffindor` section.
+6. Starting with `six.html` and load your `six.js` file as a module so it can
+   import the data from `six.data.js`. Build new HTML content inside the `main`
+   element based on the `data` Array. All the objects have the properties `tag`,
+   `text`, and `children`. If `text` is empty then there is nothing to set as
+   the `textContent` or append as a new TextNode. Tags like `img` or `a` will
+   have other properties that are specific to them, and you will have to check
+   for those. Inside the `children` Array there could be other elements to
+   append. Each child object will have a property `beforeText`. If that is set
+   to `true` then you should append the child element before the `text` from the
+   parent. This can be done with the `insertBefore` or `insertAdjacentHTML`
+   methods.
+7. Starting with `seven.html` and loading `seven.js`, listen for the submit
+   event from the `form`. Based on the values from the form, generate and
+   display random lucky numbers. Each number should be displayed in a `div` with
+   the class `lucky` so the CSS from `main.css` will apply. OR you can edit
+   main.css and add your own CSS for each number.
